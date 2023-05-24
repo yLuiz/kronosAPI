@@ -38,10 +38,10 @@ export class BoardService {
     }
   }
 
-  findAll(id: number) {
+  findAll(boarId: number) {
     return this.prisma.boards.findMany({
       where: {
-        projectId: id,
+        projectId: boarId,
       },
       include: {
         Tasks: {
